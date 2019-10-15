@@ -34,6 +34,6 @@ func (archive *Archive) ListFileNames() []string {
 }
 
 // ToReader returnsn io.Reader for zip archive
-func (archive *Archive) ToReader() (io.Reader, error) {
-	return bytes.NewReader(archive.ZipBytes), nil
+func (archive *Archive) ToReader() io.Reader {
+	return bytes.NewReader(archive.ZipBytes)
 }
